@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C539F6921F1EB2CF00FDE5EF /* GoalPosts.png in Resources */ = {isa = PBXBuildFile; fileRef = C539F6911F1EB2CF00FDE5EF /* GoalPosts.png */; };
 		C55538971F1D619100BFC986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538961F1D619100BFC986 /* AppDelegate.swift */; };
 		C55538991F1D619100BFC986 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538981F1D619100BFC986 /* ViewController.swift */; };
 		C555389C1F1D619100BFC986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C555389A1F1D619100BFC986 /* Main.storyboard */; };
 		C555389E1F1D619100BFC986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C555389D1F1D619100BFC986 /* Assets.xcassets */; };
 		C55538A11F1D619100BFC986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C555389F1F1D619100BFC986 /* LaunchScreen.storyboard */; };
+		C55538AB1F1D777700BFC986 /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538AA1F1D777700BFC986 /* DistanceViewController.swift */; };
+		C55538AD1F1D77AC00BFC986 /* ShotLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538AC1F1D77AC00BFC986 /* ShotLocationViewController.swift */; };
+		C55538AF1F1D77BB00BFC986 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538AE1F1D77BB00BFC986 /* DataViewController.swift */; };
+		C55538B31F1D7B9A00BFC986 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538B21F1D7B9A00BFC986 /* Shot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C539F6911F1EB2CF00FDE5EF /* GoalPosts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoalPosts.png; path = ../../../../Downloads/GoalPosts.png; sourceTree = "<group>"; };
 		C55538931F1D619100BFC986 /* SoccerShotTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerShotTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55538961F1D619100BFC986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C55538981F1D619100BFC986 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,10 @@
 		C555389D1F1D619100BFC986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C55538A01F1D619100BFC986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C55538A21F1D619100BFC986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C55538AA1F1D777700BFC986 /* DistanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
+		C55538AC1F1D77AC00BFC986 /* ShotLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotLocationViewController.swift; sourceTree = "<group>"; };
+		C55538AE1F1D77BB00BFC986 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		C55538B21F1D7B9A00BFC986 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,43 @@
 		C55538951F1D619100BFC986 /* SoccerShotTracker */ = {
 			isa = PBXGroup;
 			children = (
+				C539F6911F1EB2CF00FDE5EF /* GoalPosts.png */,
+				C55538B11F1D7B7D00BFC986 /* Model */,
+				C55538A91F1D76EC00BFC986 /* ViewController */,
+				C55538A81F1D76A600BFC986 /* Storyboard */,
 				C55538961F1D619100BFC986 /* AppDelegate.swift */,
 				C55538981F1D619100BFC986 /* ViewController.swift */,
-				C555389A1F1D619100BFC986 /* Main.storyboard */,
 				C555389D1F1D619100BFC986 /* Assets.xcassets */,
-				C555389F1F1D619100BFC986 /* LaunchScreen.storyboard */,
 				C55538A21F1D619100BFC986 /* Info.plist */,
 			);
 			path = SoccerShotTracker;
+			sourceTree = "<group>";
+		};
+		C55538A81F1D76A600BFC986 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C555389A1F1D619100BFC986 /* Main.storyboard */,
+				C555389F1F1D619100BFC986 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		C55538A91F1D76EC00BFC986 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C55538AA1F1D777700BFC986 /* DistanceViewController.swift */,
+				C55538AC1F1D77AC00BFC986 /* ShotLocationViewController.swift */,
+				C55538AE1F1D77BB00BFC986 /* DataViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		C55538B11F1D7B7D00BFC986 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C55538B21F1D7B9A00BFC986 /* Shot.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C539F6921F1EB2CF00FDE5EF /* GoalPosts.png in Resources */,
 				C55538A11F1D619100BFC986 /* LaunchScreen.storyboard in Resources */,
 				C555389E1F1D619100BFC986 /* Assets.xcassets in Resources */,
 				C555389C1F1D619100BFC986 /* Main.storyboard in Resources */,
@@ -139,6 +179,10 @@
 			files = (
 				C55538991F1D619100BFC986 /* ViewController.swift in Sources */,
 				C55538971F1D619100BFC986 /* AppDelegate.swift in Sources */,
+				C55538AF1F1D77BB00BFC986 /* DataViewController.swift in Sources */,
+				C55538B31F1D7B9A00BFC986 /* Shot.swift in Sources */,
+				C55538AD1F1D77AC00BFC986 /* ShotLocationViewController.swift in Sources */,
+				C55538AB1F1D777700BFC986 /* DistanceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +346,7 @@
 				C55538A71F1D619100BFC986 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
