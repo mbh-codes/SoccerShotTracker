@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC1C3DA01A3EF2C1B1E5DE56 /* Pods_SoccerShotTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 363AB14B8B7ED98E38263E93 /* Pods_SoccerShotTracker.framework */; };
 		C539F6921F1EB2CF00FDE5EF /* GoalPosts.png in Resources */ = {isa = PBXBuildFile; fileRef = C539F6911F1EB2CF00FDE5EF /* GoalPosts.png */; };
+		C539F69E1F21219200FDE5EF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C539F69D1F21219200FDE5EF /* Login.storyboard */; };
+		C539F6A01F212AFB00FDE5EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C539F69F1F212AFB00FDE5EF /* GoogleService-Info.plist */; };
+		C539F6A41F21314700FDE5EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539F6A31F21314700FDE5EF /* LoginViewController.swift */; };
 		C55538971F1D619100BFC986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538961F1D619100BFC986 /* AppDelegate.swift */; };
 		C55538991F1D619100BFC986 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538981F1D619100BFC986 /* ViewController.swift */; };
 		C555389C1F1D619100BFC986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C555389A1F1D619100BFC986 /* Main.storyboard */; };
@@ -16,11 +20,15 @@
 		C55538AB1F1D777700BFC986 /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538AA1F1D777700BFC986 /* DistanceViewController.swift */; };
 		C55538AD1F1D77AC00BFC986 /* ShotLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538AC1F1D77AC00BFC986 /* ShotLocationViewController.swift */; };
 		C55538AF1F1D77BB00BFC986 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538AE1F1D77BB00BFC986 /* DataViewController.swift */; };
-		C55538B31F1D7B9A00BFC986 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538B21F1D7B9A00BFC986 /* Shot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		363AB14B8B7ED98E38263E93 /* Pods_SoccerShotTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoccerShotTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59183E2C3C2D40DCA2F8AD4B /* Pods-SoccerShotTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerShotTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoccerShotTracker/Pods-SoccerShotTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		C539F6911F1EB2CF00FDE5EF /* GoalPosts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoalPosts.png; path = ../../../../Downloads/GoalPosts.png; sourceTree = "<group>"; };
+		C539F69D1F21219200FDE5EF /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		C539F69F1F212AFB00FDE5EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C539F6A31F21314700FDE5EF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C55538931F1D619100BFC986 /* SoccerShotTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerShotTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55538961F1D619100BFC986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C55538981F1D619100BFC986 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +39,7 @@
 		C55538AA1F1D777700BFC986 /* DistanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
 		C55538AC1F1D77AC00BFC986 /* ShotLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotLocationViewController.swift; sourceTree = "<group>"; };
 		C55538AE1F1D77BB00BFC986 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		C55538B21F1D7B9A00BFC986 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
+		D057F41588552B4F19463E70 /* Pods-SoccerShotTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerShotTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoccerShotTracker/Pods-SoccerShotTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1C3DA01A3EF2C1B1E5DE56 /* Pods_SoccerShotTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +59,8 @@
 			children = (
 				C55538951F1D619100BFC986 /* SoccerShotTracker */,
 				C55538941F1D619100BFC986 /* Products */,
+				C694C023B1E1BB8D502AEF6E /* Pods */,
+				D4A5EE5982927932AAB0A048 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +83,7 @@
 				C55538981F1D619100BFC986 /* ViewController.swift */,
 				C555389D1F1D619100BFC986 /* Assets.xcassets */,
 				C55538A21F1D619100BFC986 /* Info.plist */,
+				C539F69F1F212AFB00FDE5EF /* GoogleService-Info.plist */,
 			);
 			path = SoccerShotTracker;
 			sourceTree = "<group>";
@@ -81,6 +93,7 @@
 			children = (
 				C555389A1F1D619100BFC986 /* Main.storyboard */,
 				C555389F1F1D619100BFC986 /* LaunchScreen.storyboard */,
+				C539F69D1F21219200FDE5EF /* Login.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -91,6 +104,7 @@
 				C55538AA1F1D777700BFC986 /* DistanceViewController.swift */,
 				C55538AC1F1D77AC00BFC986 /* ShotLocationViewController.swift */,
 				C55538AE1F1D77BB00BFC986 /* DataViewController.swift */,
+				C539F6A31F21314700FDE5EF /* LoginViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -98,9 +112,25 @@
 		C55538B11F1D7B7D00BFC986 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C55538B21F1D7B9A00BFC986 /* Shot.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		C694C023B1E1BB8D502AEF6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59183E2C3C2D40DCA2F8AD4B /* Pods-SoccerShotTracker.debug.xcconfig */,
+				D057F41588552B4F19463E70 /* Pods-SoccerShotTracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D4A5EE5982927932AAB0A048 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				363AB14B8B7ED98E38263E93 /* Pods_SoccerShotTracker.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,9 +140,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C55538A51F1D619100BFC986 /* Build configuration list for PBXNativeTarget "SoccerShotTracker" */;
 			buildPhases = (
+				8756F38DF796A9F9AF293D12 /* [CP] Check Pods Manifest.lock */,
 				C555388F1F1D619100BFC986 /* Sources */,
 				C55538901F1D619100BFC986 /* Frameworks */,
 				C55538911F1D619100BFC986 /* Resources */,
+				FD437D662370AAE01C73E34E /* [CP] Embed Pods Frameworks */,
+				B5205D0AB37263B186B15663 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -166,21 +199,71 @@
 				C539F6921F1EB2CF00FDE5EF /* GoalPosts.png in Resources */,
 				C55538A11F1D619100BFC986 /* LaunchScreen.storyboard in Resources */,
 				C555389E1F1D619100BFC986 /* Assets.xcassets in Resources */,
+				C539F69E1F21219200FDE5EF /* Login.storyboard in Resources */,
 				C555389C1F1D619100BFC986 /* Main.storyboard in Resources */,
+				C539F6A01F212AFB00FDE5EF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8756F38DF796A9F9AF293D12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B5205D0AB37263B186B15663 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SoccerShotTracker/Pods-SoccerShotTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD437D662370AAE01C73E34E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SoccerShotTracker/Pods-SoccerShotTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C555388F1F1D619100BFC986 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C539F6A41F21314700FDE5EF /* LoginViewController.swift in Sources */,
 				C55538991F1D619100BFC986 /* ViewController.swift in Sources */,
 				C55538971F1D619100BFC986 /* AppDelegate.swift in Sources */,
 				C55538AF1F1D77BB00BFC986 /* DataViewController.swift in Sources */,
-				C55538B31F1D7B9A00BFC986 /* Shot.swift in Sources */,
 				C55538AD1F1D77AC00BFC986 /* ShotLocationViewController.swift in Sources */,
 				C55538AB1F1D777700BFC986 /* DistanceViewController.swift in Sources */,
 			);
@@ -303,6 +386,7 @@
 		};
 		C55538A61F1D619100BFC986 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59183E2C3C2D40DCA2F8AD4B /* Pods-SoccerShotTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SZN6BLT893;
@@ -316,6 +400,7 @@
 		};
 		C55538A71F1D619100BFC986 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D057F41588552B4F19463E70 /* Pods-SoccerShotTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SZN6BLT893;

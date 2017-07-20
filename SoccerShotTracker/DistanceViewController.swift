@@ -10,7 +10,9 @@ import UIKit
 
 class DistanceViewController: UIViewController {
     
-    /* Variables */ 
+    /* Variables */
+ //   var shots = [Shot]()
+    
     @IBOutlet weak var shotDistance: UITextField!
     
  
