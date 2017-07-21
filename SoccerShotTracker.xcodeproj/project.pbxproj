@@ -12,6 +12,9 @@
 		C539F69E1F21219200FDE5EF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C539F69D1F21219200FDE5EF /* Login.storyboard */; };
 		C539F6A01F212AFB00FDE5EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C539F69F1F212AFB00FDE5EF /* GoogleService-Info.plist */; };
 		C539F6A41F21314700FDE5EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539F6A31F21314700FDE5EF /* LoginViewController.swift */; };
+		C54DCEE71F21618100C6BDC2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DCEE61F21618100C6BDC2 /* User.swift */; };
+		C54DCEE91F216E8A00C6BDC2 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DCEE81F216E8A00C6BDC2 /* CreateUsernameViewController.swift */; };
+		C54DCEEC1F2186BD00C6BDC2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DCEEB1F2186BD00C6BDC2 /* UserService.swift */; };
 		C55538971F1D619100BFC986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538961F1D619100BFC986 /* AppDelegate.swift */; };
 		C55538991F1D619100BFC986 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538981F1D619100BFC986 /* ViewController.swift */; };
 		C555389C1F1D619100BFC986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C555389A1F1D619100BFC986 /* Main.storyboard */; };
@@ -29,6 +32,9 @@
 		C539F69D1F21219200FDE5EF /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		C539F69F1F212AFB00FDE5EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C539F6A31F21314700FDE5EF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C54DCEE61F21618100C6BDC2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C54DCEE81F216E8A00C6BDC2 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		C54DCEEB1F2186BD00C6BDC2 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		C55538931F1D619100BFC986 /* SoccerShotTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerShotTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55538961F1D619100BFC986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C55538981F1D619100BFC986 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C54DCEEA1F21869400C6BDC2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C54DCEEB1F2186BD00C6BDC2 /* UserService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		C555388A1F1D619000BFC986 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +92,7 @@
 				C539F6911F1EB2CF00FDE5EF /* GoalPosts.png */,
 				C55538B11F1D7B7D00BFC986 /* Model */,
 				C55538A91F1D76EC00BFC986 /* ViewController */,
+				C54DCEEA1F21869400C6BDC2 /* Services */,
 				C55538A81F1D76A600BFC986 /* Storyboard */,
 				C55538961F1D619100BFC986 /* AppDelegate.swift */,
 				C55538981F1D619100BFC986 /* ViewController.swift */,
@@ -105,6 +120,7 @@
 				C55538AC1F1D77AC00BFC986 /* ShotLocationViewController.swift */,
 				C55538AE1F1D77BB00BFC986 /* DataViewController.swift */,
 				C539F6A31F21314700FDE5EF /* LoginViewController.swift */,
+				C54DCEE81F216E8A00C6BDC2 /* CreateUsernameViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -112,6 +128,7 @@
 		C55538B11F1D7B7D00BFC986 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C54DCEE61F21618100C6BDC2 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -260,12 +277,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54DCEE91F216E8A00C6BDC2 /* CreateUsernameViewController.swift in Sources */,
 				C539F6A41F21314700FDE5EF /* LoginViewController.swift in Sources */,
+				C54DCEEC1F2186BD00C6BDC2 /* UserService.swift in Sources */,
 				C55538991F1D619100BFC986 /* ViewController.swift in Sources */,
 				C55538971F1D619100BFC986 /* AppDelegate.swift in Sources */,
 				C55538AF1F1D77BB00BFC986 /* DataViewController.swift in Sources */,
 				C55538AD1F1D77AC00BFC986 /* ShotLocationViewController.swift in Sources */,
 				C55538AB1F1D777700BFC986 /* DistanceViewController.swift in Sources */,
+				C54DCEE71F21618100C6BDC2 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
