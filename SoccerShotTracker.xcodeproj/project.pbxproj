@@ -15,6 +15,9 @@
 		C54DCEE71F21618100C6BDC2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DCEE61F21618100C6BDC2 /* User.swift */; };
 		C54DCEE91F216E8A00C6BDC2 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DCEE81F216E8A00C6BDC2 /* CreateUsernameViewController.swift */; };
 		C54DCEEC1F2186BD00C6BDC2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DCEEB1F2186BD00C6BDC2 /* UserService.swift */; };
+		C54DCEF01F22855C00C6BDC2 /* rectangleSoccerGoalPost.png in Resources */ = {isa = PBXBuildFile; fileRef = C54DCEEF1F22855C00C6BDC2 /* rectangleSoccerGoalPost.png */; };
+		C54DCEF21F229D2A00C6BDC2 /* halfSoccerField.png in Resources */ = {isa = PBXBuildFile; fileRef = C54DCEF11F229D2A00C6BDC2 /* halfSoccerField.png */; };
+		C54DCEF41F229EBA00C6BDC2 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DCEF31F229EBA00C6BDC2 /* Shot.swift */; };
 		C55538971F1D619100BFC986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538961F1D619100BFC986 /* AppDelegate.swift */; };
 		C55538991F1D619100BFC986 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538981F1D619100BFC986 /* ViewController.swift */; };
 		C555389C1F1D619100BFC986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C555389A1F1D619100BFC986 /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 		C54DCEE61F21618100C6BDC2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C54DCEE81F216E8A00C6BDC2 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		C54DCEEB1F2186BD00C6BDC2 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		C54DCEEF1F22855C00C6BDC2 /* rectangleSoccerGoalPost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rectangleSoccerGoalPost.png; path = ../../../../Downloads/rectangleSoccerGoalPost.png; sourceTree = "<group>"; };
+		C54DCEF11F229D2A00C6BDC2 /* halfSoccerField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = halfSoccerField.png; path = ../../../../Downloads/halfSoccerField.png; sourceTree = "<group>"; };
+		C54DCEF31F229EBA00C6BDC2 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
 		C55538931F1D619100BFC986 /* SoccerShotTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerShotTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55538961F1D619100BFC986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C55538981F1D619100BFC986 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +95,8 @@
 		C55538951F1D619100BFC986 /* SoccerShotTracker */ = {
 			isa = PBXGroup;
 			children = (
+				C54DCEF11F229D2A00C6BDC2 /* halfSoccerField.png */,
+				C54DCEEF1F22855C00C6BDC2 /* rectangleSoccerGoalPost.png */,
 				C539F6911F1EB2CF00FDE5EF /* GoalPosts.png */,
 				C55538B11F1D7B7D00BFC986 /* Model */,
 				C55538A91F1D76EC00BFC986 /* ViewController */,
@@ -129,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				C54DCEE61F21618100C6BDC2 /* User.swift */,
+				C54DCEF31F229EBA00C6BDC2 /* Shot.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -215,7 +224,9 @@
 			files = (
 				C539F6921F1EB2CF00FDE5EF /* GoalPosts.png in Resources */,
 				C55538A11F1D619100BFC986 /* LaunchScreen.storyboard in Resources */,
+				C54DCEF01F22855C00C6BDC2 /* rectangleSoccerGoalPost.png in Resources */,
 				C555389E1F1D619100BFC986 /* Assets.xcassets in Resources */,
+				C54DCEF21F229D2A00C6BDC2 /* halfSoccerField.png in Resources */,
 				C539F69E1F21219200FDE5EF /* Login.storyboard in Resources */,
 				C555389C1F1D619100BFC986 /* Main.storyboard in Resources */,
 				C539F6A01F212AFB00FDE5EF /* GoogleService-Info.plist in Resources */,
@@ -280,6 +291,7 @@
 				C54DCEE91F216E8A00C6BDC2 /* CreateUsernameViewController.swift in Sources */,
 				C539F6A41F21314700FDE5EF /* LoginViewController.swift in Sources */,
 				C54DCEEC1F2186BD00C6BDC2 /* UserService.swift in Sources */,
+				C54DCEF41F229EBA00C6BDC2 /* Shot.swift in Sources */,
 				C55538991F1D619100BFC986 /* ViewController.swift in Sources */,
 				C55538971F1D619100BFC986 /* AppDelegate.swift in Sources */,
 				C55538AF1F1D77BB00BFC986 /* DataViewController.swift in Sources */,
