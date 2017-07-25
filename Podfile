@@ -10,5 +10,6 @@ target 'SoccerShotTracker' do
   pod ‘Firebase/Auth’
   pod ‘FirebaseUI/Auth’
   pod ‘Firebase/Database’
-  pod ‘Firebase/Storage’	
+  pod ‘Firebase/Storage’
+  pod ‘PureLayout’, ’~> 2.0.5’	
 end

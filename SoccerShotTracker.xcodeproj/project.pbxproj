@@ -26,6 +26,8 @@
 		C55538AB1F1D777700BFC986 /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538AA1F1D777700BFC986 /* DistanceViewController.swift */; };
 		C55538AD1F1D77AC00BFC986 /* ShotLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538AC1F1D77AC00BFC986 /* ShotLocationViewController.swift */; };
 		C55538AF1F1D77BB00BFC986 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538AE1F1D77BB00BFC986 /* DataViewController.swift */; };
+		C5F6D05B1F27CAB3004F3B22 /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = C5F6D05A1F27CAB2004F3B22 /* football.png */; };
+		C5F6D05D1F281023004F3B22 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F6D05C1F281022004F3B22 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		C55538AA1F1D777700BFC986 /* DistanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
 		C55538AC1F1D77AC00BFC986 /* ShotLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotLocationViewController.swift; sourceTree = "<group>"; };
 		C55538AE1F1D77BB00BFC986 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		C5F6D05A1F27CAB2004F3B22 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = football.png; path = ../../../../Downloads/football.png; sourceTree = "<group>"; };
+		C5F6D05C1F281022004F3B22 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D057F41588552B4F19463E70 /* Pods-SoccerShotTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerShotTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoccerShotTracker/Pods-SoccerShotTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +99,7 @@
 		C55538951F1D619100BFC986 /* SoccerShotTracker */ = {
 			isa = PBXGroup;
 			children = (
+				C5F6D05A1F27CAB2004F3B22 /* football.png */,
 				C54DCEF11F229D2A00C6BDC2 /* halfSoccerField.png */,
 				C54DCEEF1F22855C00C6BDC2 /* rectangleSoccerGoalPost.png */,
 				C539F6911F1EB2CF00FDE5EF /* GoalPosts.png */,
@@ -107,6 +112,7 @@
 				C555389D1F1D619100BFC986 /* Assets.xcassets */,
 				C55538A21F1D619100BFC986 /* Info.plist */,
 				C539F69F1F212AFB00FDE5EF /* GoogleService-Info.plist */,
+				C5F6D05C1F281022004F3B22 /* Constants.swift */,
 			);
 			path = SoccerShotTracker;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 				C539F6921F1EB2CF00FDE5EF /* GoalPosts.png in Resources */,
 				C55538A11F1D619100BFC986 /* LaunchScreen.storyboard in Resources */,
 				C54DCEF01F22855C00C6BDC2 /* rectangleSoccerGoalPost.png in Resources */,
+				C5F6D05B1F27CAB3004F3B22 /* football.png in Resources */,
 				C555389E1F1D619100BFC986 /* Assets.xcassets in Resources */,
 				C54DCEF21F229D2A00C6BDC2 /* halfSoccerField.png in Resources */,
 				C539F69E1F21219200FDE5EF /* Login.storyboard in Resources */,
@@ -289,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C54DCEE91F216E8A00C6BDC2 /* CreateUsernameViewController.swift in Sources */,
+				C5F6D05D1F281023004F3B22 /* Constants.swift in Sources */,
 				C539F6A41F21314700FDE5EF /* LoginViewController.swift in Sources */,
 				C54DCEEC1F2186BD00C6BDC2 /* UserService.swift in Sources */,
 				C54DCEF41F229EBA00C6BDC2 /* Shot.swift in Sources */,

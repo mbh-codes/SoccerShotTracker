@@ -6,11 +6,11 @@
 //  Copyright © 2017 MBH. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import FirebaseDatabase.FIRDataSnapshot
 
 
-class User {
+class User: NSObject {
 
     // Properties
     let uid: String
@@ -42,3 +42,9 @@ class User {
         _current = user
     }
 }
+//extension User: NSCoding {
+//    func encode(with aCoder: NSCoder){
+//        aCoder.encode(uid, forKey: Constants.UserDefaults.uid)
+//        aCoder.encode(username, forKey: Constants.UserDefaults.username)
+//    }
+//}
