@@ -23,7 +23,6 @@ class CreateUsernameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -42,33 +41,16 @@ class CreateUsernameViewController: UIViewController {
             guard let user = user else {
                 return
             }
-        User.setCurrent(user)
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        if let initialViewController = storyboard.instantiateInitialViewController() {
-            self.view.window?.rootViewController = initialViewController
-            self.view.window?.makeKeyAndVisible()
+            User.setCurrent(user)
+                let storyboard = UIStoryboard(name: "Main", bundle: .main)
+                if let initialViewController = storyboard.instantiateInitialViewController() {
+                    self.view.window?.rootViewController = initialViewController
+                    self.view.window?.makeKeyAndVisible()
         
-        }
+                }
+            }
     }
-        
-        
-//        guard let firUser = Auth.auth().currentUser,
-//            let username = usernameTextField.text,
-//            !username.isEmpty else  { return }
-//        let userAttrs = ["username": username]
-//        let ref = Database.database().reference().child("users").child(firUser.uid)
-//        
-//        ref.setValue(userAttrs) { (error, ref) in
-//            if let error = error {
-//                assertionFailure(error.localizedDescription)
-//                return
-//            }
-//            ref.observeSingleEvent(of: .value, with: { (snapshot) in
-//                let user = User(snapshot: snapshot)
-//            
-//            })
-//        }
-    }
+}
 
     /*
     // MARK: - Navigation
@@ -80,4 +62,3 @@ class CreateUsernameViewController: UIViewController {
     }
     */
 
-}

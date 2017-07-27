@@ -17,7 +17,7 @@
 		C54DCEEC1F2186BD00C6BDC2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DCEEB1F2186BD00C6BDC2 /* UserService.swift */; };
 		C54DCEF01F22855C00C6BDC2 /* rectangleSoccerGoalPost.png in Resources */ = {isa = PBXBuildFile; fileRef = C54DCEEF1F22855C00C6BDC2 /* rectangleSoccerGoalPost.png */; };
 		C54DCEF21F229D2A00C6BDC2 /* halfSoccerField.png in Resources */ = {isa = PBXBuildFile; fileRef = C54DCEF11F229D2A00C6BDC2 /* halfSoccerField.png */; };
-		C54DCEF41F229EBA00C6BDC2 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DCEF31F229EBA00C6BDC2 /* Shot.swift */; };
+		C54DCEF41F229EBA00C6BDC2 /* DistanceShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DCEF31F229EBA00C6BDC2 /* DistanceShot.swift */; };
 		C55538971F1D619100BFC986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538961F1D619100BFC986 /* AppDelegate.swift */; };
 		C55538991F1D619100BFC986 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538981F1D619100BFC986 /* ViewController.swift */; };
 		C555389C1F1D619100BFC986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C555389A1F1D619100BFC986 /* Main.storyboard */; };
@@ -28,6 +28,10 @@
 		C55538AF1F1D77BB00BFC986 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55538AE1F1D77BB00BFC986 /* DataViewController.swift */; };
 		C5F6D05B1F27CAB3004F3B22 /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = C5F6D05A1F27CAB2004F3B22 /* football.png */; };
 		C5F6D05D1F281023004F3B22 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F6D05C1F281022004F3B22 /* Constants.swift */; };
+		C5F6D05F1F28FF9B004F3B22 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F6D05E1F28FF9B004F3B22 /* StorageService.swift */; };
+		C5F6D0611F29161E004F3B22 /* ShotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F6D0601F29161E004F3B22 /* ShotService.swift */; };
+		C5F6D0631F294223004F3B22 /* LandedShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F6D0621F294223004F3B22 /* LandedShot.swift */; };
+		C5F6D0651F29711A004F3B22 /* mapstogpx20170727_005322.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C5F6D0641F29711A004F3B22 /* mapstogpx20170727_005322.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +46,7 @@
 		C54DCEEB1F2186BD00C6BDC2 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		C54DCEEF1F22855C00C6BDC2 /* rectangleSoccerGoalPost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rectangleSoccerGoalPost.png; path = ../../../../Downloads/rectangleSoccerGoalPost.png; sourceTree = "<group>"; };
 		C54DCEF11F229D2A00C6BDC2 /* halfSoccerField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = halfSoccerField.png; path = ../../../../Downloads/halfSoccerField.png; sourceTree = "<group>"; };
-		C54DCEF31F229EBA00C6BDC2 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
+		C54DCEF31F229EBA00C6BDC2 /* DistanceShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceShot.swift; sourceTree = "<group>"; };
 		C55538931F1D619100BFC986 /* SoccerShotTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerShotTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55538961F1D619100BFC986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C55538981F1D619100BFC986 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +59,10 @@
 		C55538AE1F1D77BB00BFC986 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		C5F6D05A1F27CAB2004F3B22 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = football.png; path = ../../../../Downloads/football.png; sourceTree = "<group>"; };
 		C5F6D05C1F281022004F3B22 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C5F6D05E1F28FF9B004F3B22 /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		C5F6D0601F29161E004F3B22 /* ShotService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotService.swift; sourceTree = "<group>"; };
+		C5F6D0621F294223004F3B22 /* LandedShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandedShot.swift; sourceTree = "<group>"; };
+		C5F6D0641F29711A004F3B22 /* mapstogpx20170727_005322.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = mapstogpx20170727_005322.gpx; path = ../../../../Downloads/mapstogpx20170727_005322.gpx; sourceTree = "<group>"; };
 		D057F41588552B4F19463E70 /* Pods-SoccerShotTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerShotTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoccerShotTracker/Pods-SoccerShotTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				C54DCEEB1F2186BD00C6BDC2 /* UserService.swift */,
+				C5F6D05E1F28FF9B004F3B22 /* StorageService.swift */,
+				C5F6D0601F29161E004F3B22 /* ShotService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -99,6 +109,7 @@
 		C55538951F1D619100BFC986 /* SoccerShotTracker */ = {
 			isa = PBXGroup;
 			children = (
+				C5F6D0641F29711A004F3B22 /* mapstogpx20170727_005322.gpx */,
 				C5F6D05A1F27CAB2004F3B22 /* football.png */,
 				C54DCEF11F229D2A00C6BDC2 /* halfSoccerField.png */,
 				C54DCEEF1F22855C00C6BDC2 /* rectangleSoccerGoalPost.png */,
@@ -143,7 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				C54DCEE61F21618100C6BDC2 /* User.swift */,
-				C54DCEF31F229EBA00C6BDC2 /* Shot.swift */,
+				C54DCEF31F229EBA00C6BDC2 /* DistanceShot.swift */,
+				C5F6D0621F294223004F3B22 /* LandedShot.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -235,6 +247,7 @@
 				C555389E1F1D619100BFC986 /* Assets.xcassets in Resources */,
 				C54DCEF21F229D2A00C6BDC2 /* halfSoccerField.png in Resources */,
 				C539F69E1F21219200FDE5EF /* Login.storyboard in Resources */,
+				C5F6D0651F29711A004F3B22 /* mapstogpx20170727_005322.gpx in Resources */,
 				C555389C1F1D619100BFC986 /* Main.storyboard in Resources */,
 				C539F6A01F212AFB00FDE5EF /* GoogleService-Info.plist in Resources */,
 			);
@@ -295,13 +308,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F6D0611F29161E004F3B22 /* ShotService.swift in Sources */,
 				C54DCEE91F216E8A00C6BDC2 /* CreateUsernameViewController.swift in Sources */,
+				C5F6D05F1F28FF9B004F3B22 /* StorageService.swift in Sources */,
 				C5F6D05D1F281023004F3B22 /* Constants.swift in Sources */,
 				C539F6A41F21314700FDE5EF /* LoginViewController.swift in Sources */,
 				C54DCEEC1F2186BD00C6BDC2 /* UserService.swift in Sources */,
-				C54DCEF41F229EBA00C6BDC2 /* Shot.swift in Sources */,
+				C54DCEF41F229EBA00C6BDC2 /* DistanceShot.swift in Sources */,
 				C55538991F1D619100BFC986 /* ViewController.swift in Sources */,
 				C55538971F1D619100BFC986 /* AppDelegate.swift in Sources */,
+				C5F6D0631F294223004F3B22 /* LandedShot.swift in Sources */,
 				C55538AF1F1D77BB00BFC986 /* DataViewController.swift in Sources */,
 				C55538AD1F1D77AC00BFC986 /* ShotLocationViewController.swift in Sources */,
 				C55538AB1F1D777700BFC986 /* DistanceViewController.swift in Sources */,

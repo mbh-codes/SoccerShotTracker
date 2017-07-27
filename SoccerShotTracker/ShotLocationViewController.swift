@@ -9,6 +9,7 @@
 import UIKit
 
 class ShotLocationViewController: UIViewController {
+    var tapped = false
     
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var shotLocation: UIView!
@@ -28,17 +29,24 @@ class ShotLocationViewController: UIViewController {
             let hitView = self.view.hitTest(firstTouch.location(in: self.view), with: event)
             let shotLandedLocation = firstTouch.location(in: shotLocation)
             if hitView === shotLocation {
+                tapped = true
+                print("Tap is inside")
                 self.edgesForExtendedLayout = []
                 let shotLocationPoint = CGPoint(x: shotLandedLocation.x + 20,y: shotLandedLocation.y + 160)
+                print("shotLocationPoint is \(shotLocationPoint)")
                 shotLocationMarker.center = shotLocationPoint
+            } else {
+                print("Tap is outside")
             }
         }
     }
     
     @IBAction func continueButtonSelected(_ sender: UIButton){
-
+        if(tapped){
             self.performSegue(withIdentifier: "shotLocationVCToTab", sender: self)
-//        }
+        } else {
+            print("Has not yet tapped inside")
+        }
     }
 }
 
