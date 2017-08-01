@@ -61,13 +61,16 @@ extension LoginViewController: FUIAuthDelegate {
         }
         print("handle user signup/ login")
         guard let user = user
-            else { return }
+            else { return
+        print("please print this")
+        }
+        
         let userRef = Database.database().reference().child("users").child(user.uid)
         
         userRef.observeSingleEvent(of: .value, with: { [unowned self] (snapshot) in
             if let user = User(snapshot: snapshot) {
                 User.setCurrent(user)
-                
+                print("not working")
                 let storyboard = UIStoryboard(name: "Main", bundle: .main)
                 if let initialViewController = storyboard.instantiateInitialViewController() {
                     self.view.window?.rootViewController = initialViewController

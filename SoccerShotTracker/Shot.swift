@@ -9,8 +9,19 @@
 import UIKit
 import FirebaseDatabase.FIRDataSnapshot
 
-class DistanceShot {
-    var distance = CGPoint()
+class Shot {
+    var distancePoint = CGPoint()
+    var landedPoint = CGPoint()
+}
+//    init?(snapshot: DataSnapshot) {
+//        guard let dict = snapshot.value as? [String: Any],
+//            let distancePoint = dict["distanceShots"] as? CGPoint
+//            else { return nil }
+//        self.distancePoint = distancePoint
+//    }
+//    init(distance: CGPoint, shotLanded: CGPoint) {
+//        self.distancePoint = distance
+//    }
     
     //Properties and Initializers
 //    let poster: User
@@ -47,4 +58,4 @@ class DistanceShot {
 //        self.poster = User.current
 //
 //    }
-}
+

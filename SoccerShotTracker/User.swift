@@ -25,11 +25,32 @@ class User: NSObject {
     
     init? (snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
-        let username = dict["username"] as? String
-            else { return nil }
+            let username = dict["username"] as? String
+                else { return nil }
         self.uid = snapshot.key
         self.username = username
+        super.init()
     }
+    required init?(coder aDecoder: NSCoder) {
+        guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefualts.uid) as? String,
+            let username = aDecoder.decodeObject(forKey: Constants.UserDefualts.username) as? String
+            else { return  nil }
+        self.uid = uid
+        self.username = username
+        super.init()
+    }
+    
+    
+    
+    class func setCurrent(_ user: User, writeToUserDefaults: Bool = false) {
+        if writeToUserDefaults {
+            let data = NSKeyedArchiver.archivedData(withRootObject: user)
+            UserDefaults.standard.set(data, forKey: Constants.UserDefualts.currentUser)
+        }
+        _current = user
+    }
+
+
     private static var _current: User?
     
     static var current: User {
@@ -40,6 +61,14 @@ class User: NSObject {
     }
     static func setCurrent(_ user: User) {
         _current = user
+    }
+}
+
+
+extension User: NSCoding {
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(uid, forKey: Constants.UserDefualts.uid)
+        aCoder.encode(uid, forKey: Constants.UserDefualts.username)
     }
 }
 //extension User: NSCoding {

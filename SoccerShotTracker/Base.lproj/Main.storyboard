@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QRi-Pu-C8H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QRi-Pu-C8H">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,23 +23,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shots Landed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc8-et-Jd1">
-                                <rect key="frame" x="130" y="28" width="114" height="21"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="cs4-a4-fgi">
+                                <rect key="frame" x="15" y="104" width="345" height="320.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Shots Landed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc8-et-Jd1">
+                                        <rect key="frame" x="119.5" y="0.0" width="106" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rectangleSoccerGoalPost.png" translatesAutoresizingMaskIntoConstraints="NO" id="BHU-ne-5Dn">
+                                        <rect key="frame" x="0.0" y="70.5" width="345" height="250"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wer-fp-dMD">
+                                <rect key="frame" x="166" y="467" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rectangleSoccerGoalPost.png" translatesAutoresizingMaskIntoConstraints="NO" id="BHU-ne-5Dn">
-                                <rect key="frame" x="14" y="89" width="345" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Shot Map" id="k8u-Tz-GIC"/>
                     <connections>
                         <outlet property="dataChart" destination="BHU-ne-5Dn" id="SUD-QH-YtE"/>
+                        <outlet property="randomLabel" destination="Wer-fp-dMD" id="QE0-OB-34k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q7M-DD-8GB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -58,37 +70,100 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="halfSoccerField.png" translatesAutoresizingMaskIntoConstraints="NO" id="muY-9h-ZQh">
-                                <rect key="frame" x="29" y="196" width="330" height="275"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56g-5p-dKT">
-                                <rect key="frame" x="155" y="561" width="65" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Continue"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56g-5p-dKT">
+                                <rect key="frame" x="0.0" y="584" width="375" height="34"/>
+                                <color key="backgroundColor" red="0.64776059102522321" green="1" blue="0.64722934204020621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="20"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="continueButtonTapped:" destination="UMv-9T-Z5F" eventType="touchUpInside" id="UoQ-fH-7or"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="football.png" translatesAutoresizingMaskIntoConstraints="NO" id="mtz-HG-VTw">
-                                <rect key="frame" x="184" y="288" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How far did you shoot from?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNg-tR-FMR">
-                                <rect key="frame" x="57" y="98" width="260" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the spot of your shot." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNg-tR-FMR">
+                                <rect key="frame" x="89" y="88" width="197" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="647-yK-euw">
+                                <rect key="frame" x="13" y="199" width="349" height="270"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z3d-7O-LTh" userLabel="cornerPoint">
+                                        <rect key="frame" x="0.0" y="0.0" width="1" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hR-EL-V26">
+                                        <rect key="frame" x="63" y="190" width="223" height="80"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3oU-SB-J2z">
+                                                <rect key="frame" x="107" y="22" width="10" height="10"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8iB-Ls-gnM">
+                                                <rect key="frame" x="24" y="60" width="174" height="20"/>
+                                                <color key="backgroundColor" red="0.72783207890000001" green="0.15987607682046417" blue="0.087506408776662575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.5942606345302055" green="1" blue="0.58077464340460905" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="8iB-Ls-gnM" firstAttribute="top" secondItem="1hR-EL-V26" secondAttribute="top" constant="90" id="JwM-Cr-4Rg"/>
+                                            <constraint firstItem="8iB-Ls-gnM" firstAttribute="centerX" secondItem="1hR-EL-V26" secondAttribute="centerX" id="g9X-Wy-SP1"/>
+                                            <constraint firstAttribute="bottom" secondItem="8iB-Ls-gnM" secondAttribute="bottom" id="jRe-O3-clC"/>
+                                            <constraint firstItem="8iB-Ls-gnM" firstAttribute="top" secondItem="3oU-SB-J2z" secondAttribute="bottom" constant="12" id="xc0-HV-0gt"/>
+                                            <constraint firstItem="8iB-Ls-gnM" firstAttribute="leading" secondItem="1hR-EL-V26" secondAttribute="leading" constant="24" id="yvD-hI-af6"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I3R-Re-lDJ">
+                                        <rect key="frame" x="135" y="-40" width="80" height="80"/>
+                                        <color key="backgroundColor" red="0.39660902485155053" green="0.68500119449999997" blue="0.47862773864868119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="VcT-Cv-MlA"/>
+                                            <constraint firstAttribute="height" constant="80" id="Z45-V4-2cW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.50771626518525947" green="0.68501853940000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="I3R-Re-lDJ" firstAttribute="centerX" secondItem="647-yK-euw" secondAttribute="centerX" id="D2F-Vt-gT6"/>
+                                    <constraint firstItem="1hR-EL-V26" firstAttribute="top" secondItem="647-yK-euw" secondAttribute="top" constant="190" id="L26-nL-bOh"/>
+                                    <constraint firstItem="I3R-Re-lDJ" firstAttribute="centerX" secondItem="1hR-EL-V26" secondAttribute="centerX" id="UI9-gb-oi6"/>
+                                    <constraint firstItem="1hR-EL-V26" firstAttribute="leading" secondItem="647-yK-euw" secondAttribute="leading" constant="63" id="cbz-0r-sly"/>
+                                    <constraint firstAttribute="bottom" secondItem="1hR-EL-V26" secondAttribute="bottom" id="qRV-D0-PpG"/>
+                                    <constraint firstItem="I3R-Re-lDJ" firstAttribute="top" secondItem="647-yK-euw" secondAttribute="top" constant="-40" id="tm2-mb-596"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpO-aX-Cha">
+                                <rect key="frame" x="183" y="323" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.31602784989999999" green="0.68500119449999997" blue="0.1681916118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="56g-5p-dKT" firstAttribute="bottom" secondItem="DiH-Ea-9N3" secondAttribute="top" id="0x1-Ae-gbh"/>
+                            <constraint firstItem="647-yK-euw" firstAttribute="centerY" secondItem="PRz-NF-QlC" secondAttribute="centerY" id="3mT-ZF-mTg"/>
+                            <constraint firstItem="647-yK-euw" firstAttribute="top" secondItem="dNg-tR-FMR" secondAttribute="bottom" constant="90" id="5X7-SV-ZtK"/>
+                            <constraint firstItem="647-yK-euw" firstAttribute="centerX" secondItem="dNg-tR-FMR" secondAttribute="centerX" id="Kf1-1c-BCV"/>
+                            <constraint firstItem="647-yK-euw" firstAttribute="centerX" secondItem="PRz-NF-QlC" secondAttribute="centerX" id="LFy-V3-bMB"/>
+                            <constraint firstItem="647-yK-euw" firstAttribute="top" secondItem="PRz-NF-QlC" secondAttribute="top" constant="199" id="Qtj-yb-arb"/>
+                            <constraint firstItem="647-yK-euw" firstAttribute="centerX" secondItem="56g-5p-dKT" secondAttribute="centerX" id="edd-vz-96t"/>
+                            <constraint firstItem="56g-5p-dKT" firstAttribute="leading" secondItem="PRz-NF-QlC" secondAttribute="leading" id="wvZ-qD-o9n"/>
+                            <constraint firstItem="647-yK-euw" firstAttribute="leading" secondItem="PRz-NF-QlC" secondAttribute="leadingMargin" constant="-3" id="y7L-o9-gVt"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Input Shots" id="fsA-hs-t6W"/>
                     <connections>
                         <outlet property="continueButton" destination="56g-5p-dKT" id="OcZ-ZB-qUt"/>
-                        <outlet property="shotDistance" destination="muY-9h-ZQh" id="fih-Qs-ENV"/>
-                        <outlet property="shotDistanceMarker" destination="mtz-HG-VTw" id="zK2-wA-H3C"/>
+                        <outlet property="cornerPoint" destination="Z3d-7O-LTh" id="KJS-l3-8qn"/>
+                        <outlet property="goalBox" destination="1hR-EL-V26" id="tYE-QS-3Gn"/>
+                        <outlet property="halfFieldCircle" destination="I3R-Re-lDJ" id="oxT-LR-vTN"/>
+                        <outlet property="penaltyMarkCircle" destination="3oU-SB-J2z" id="cd3-pZ-tkz"/>
+                        <outlet property="shotDistance" destination="647-yK-euw" id="Yh7-Yq-Td0"/>
+                        <outlet property="shotDistanceMarker" destination="mpO-aX-Cha" id="CYK-VW-f6s"/>
+                        <outlet property="sixYardBox" destination="8iB-Ls-gnM" id="JKa-oq-ku3"/>
                         <segue destination="BNR-ln-2ls" kind="show" identifier="distanceToShotLocationVC" id="Ua8-ps-T0y"/>
                     </connections>
                 </viewController>
@@ -108,49 +183,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where did your shot land?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HO-yB-5bp">
-                                <rect key="frame" x="74" y="66" width="226" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVJ-18-gMu">
-                                <rect key="frame" x="141" y="417" width="67" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Y2x-9f-2bl">
+                                <rect key="frame" x="16" y="98" width="343" height="316.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shot Landed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HO-yB-5bp">
+                                        <rect key="frame" x="72" y="0.0" width="199" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.99991267919540405" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="fY0-eW-ndN">
+                                        <rect key="frame" x="0.0" y="70.5" width="343" height="246"/>
+                                        <subviews>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangleSoccerGoalPost.png" translatesAutoresizingMaskIntoConstraints="NO" id="NKa-Vc-zDP">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="246"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="246" id="CI2-w6-DRy"/>
+                                                    <constraint firstAttribute="width" constant="343" id="YNb-6Y-v9v"/>
+                                                    <constraint firstAttribute="width" secondItem="NKa-Vc-zDP" secondAttribute="height" multiplier="343:246" id="hVJ-zv-99E"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="67" id="cEx-AD-tvT"/>
+                                    <constraint firstItem="7HO-yB-5bp" firstAttribute="leading" secondItem="Y2x-9f-2bl" secondAttribute="leading" constant="72" id="19n-KT-pZV"/>
                                 </constraints>
-                                <state key="normal" title="Continue"/>
-                                <connections>
-                                    <action selector="continueButtonSelected:" destination="BNR-ln-2ls" eventType="touchUpInside" id="Vav-NY-mMQ"/>
-                                </connections>
-                            </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangleSoccerGoalPost.png" translatesAutoresizingMaskIntoConstraints="NO" id="NKa-Vc-zDP">
-                                <rect key="frame" x="27" y="148" width="343" height="246"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="246" id="CI2-w6-DRy"/>
-                                    <constraint firstAttribute="width" constant="343" id="YNb-6Y-v9v"/>
-                                    <constraint firstAttribute="width" secondItem="NKa-Vc-zDP" secondAttribute="height" multiplier="343:246" id="hVJ-zv-99E"/>
-                                </constraints>
-                            </imageView>
+                            </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="football.png" translatesAutoresizingMaskIntoConstraints="NO" id="StC-NN-tR6">
-                                <rect key="frame" x="177" y="268" width="20" height="20"/>
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="LgR-Qh-1wD"/>
                                     <constraint firstAttribute="height" constant="20" id="oeh-tt-KpV"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVJ-18-gMu">
+                                <rect key="frame" x="0.0" y="468" width="375" height="151"/>
+                                <color key="backgroundColor" red="0.63758832216262817" green="0.96904879808425903" blue="0.64351934194564819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="25"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueButtonSelected:" destination="BNR-ln-2ls" eventType="touchUpInside" id="Vav-NY-mMQ"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.31700095534324646" green="0.68501853942871094" blue="0.16826841235160828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="StC-NN-tR6" firstAttribute="top" secondItem="Fv9-kC-eCL" secondAttribute="top" constant="268" id="0FB-h5-W1i"/>
-                            <constraint firstItem="NKa-Vc-zDP" firstAttribute="top" secondItem="7HO-yB-5bp" secondAttribute="bottom" constant="61" id="2JI-U9-wU4"/>
-                            <constraint firstItem="7HO-yB-5bp" firstAttribute="leading" secondItem="Fv9-kC-eCL" secondAttribute="leadingMargin" constant="58" id="BBq-d0-mdE"/>
-                            <constraint firstItem="7HO-yB-5bp" firstAttribute="centerX" secondItem="Fv9-kC-eCL" secondAttribute="centerX" id="BUP-zU-DXk"/>
-                            <constraint firstItem="NKa-Vc-zDP" firstAttribute="leading" secondItem="Fv9-kC-eCL" secondAttribute="leadingMargin" constant="11" id="TsS-5q-Ly6"/>
-                            <constraint firstItem="NKa-Vc-zDP" firstAttribute="top" secondItem="Fv9-kC-eCL" secondAttribute="top" constant="148" id="fWG-LB-hvi"/>
-                            <constraint firstItem="JVJ-18-gMu" firstAttribute="top" secondItem="NKa-Vc-zDP" secondAttribute="bottom" constant="23" id="h2r-dn-2NU"/>
-                            <constraint firstItem="7HO-yB-5bp" firstAttribute="centerX" secondItem="StC-NN-tR6" secondAttribute="centerX" id="isU-NE-8gC"/>
-                            <constraint firstItem="JVJ-18-gMu" firstAttribute="leading" secondItem="Fv9-kC-eCL" secondAttribute="leading" constant="141" id="t9d-ij-DbY"/>
+                            <constraint firstItem="StC-NN-tR6" firstAttribute="centerY" secondItem="Fv9-kC-eCL" secondAttribute="centerY" id="12Y-fo-MfJ"/>
+                            <constraint firstItem="StC-NN-tR6" firstAttribute="centerX" secondItem="Fv9-kC-eCL" secondAttribute="centerX" id="4SL-Xf-MSq"/>
+                            <constraint firstItem="JVJ-18-gMu" firstAttribute="top" secondItem="Y2x-9f-2bl" secondAttribute="bottom" constant="53" id="8X6-Rk-HdP"/>
+                            <constraint firstItem="jih-9t-UHb" firstAttribute="top" secondItem="JVJ-18-gMu" secondAttribute="bottom" id="Mhh-IR-uPl"/>
+                            <constraint firstAttribute="trailing" secondItem="JVJ-18-gMu" secondAttribute="trailing" id="VR5-2J-sJG"/>
+                            <constraint firstItem="JVJ-18-gMu" firstAttribute="leading" secondItem="Fv9-kC-eCL" secondAttribute="leading" id="aEQ-Ui-bS4"/>
+                            <constraint firstItem="JVJ-18-gMu" firstAttribute="leading" secondItem="Y2x-9f-2bl" secondAttribute="trailing" constant="-358.5" id="aIp-cA-f7c"/>
+                            <constraint firstItem="Y2x-9f-2bl" firstAttribute="centerX" secondItem="StC-NN-tR6" secondAttribute="centerX" id="bZF-0S-g3F"/>
+                            <constraint firstItem="Y2x-9f-2bl" firstAttribute="top" secondItem="mNk-b8-cpn" secondAttribute="bottom" constant="78" id="eWg-59-CWj"/>
                         </constraints>
                     </view>
                     <connections>
@@ -185,7 +274,6 @@
     </scenes>
     <resources>
         <image name="football.png" width="64" height="64"/>
-        <image name="halfSoccerField.png" width="330" height="275"/>
         <image name="rectangleSoccerGoalPost.png" width="345" height="250"/>
     </resources>
 </document>

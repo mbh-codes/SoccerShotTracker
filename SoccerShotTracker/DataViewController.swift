@@ -8,12 +8,18 @@
 
 import UIKit
 
+
 class DataViewController: UIViewController {
     
     @IBOutlet weak var dataChart: UIView!
+    @IBOutlet weak var randomLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+ //       UserService.distanceShots(for User.current) { (distanceShots) in
+ //           self.distanceShots = distanceShots
+ //       }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -27,6 +33,7 @@ class DataViewController: UIViewController {
             }
         }
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

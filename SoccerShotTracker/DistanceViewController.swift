@@ -7,55 +7,80 @@
 //
 
 import UIKit
-import Firebase
+
+import FirebaseDatabase
 
 
 class DistanceViewController: UIViewController {
     var tapped = false
-    var distanceOfShot = [DistanceShot]()
+    var distanceOfShots = Shot()
+    var xInts = [Double]()
+    var shotDistanceLocation = CGPoint()
     
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var shotDistance: UIView!
-    @IBOutlet weak var shotDistanceMarker: UIImageView!
-    
- 
+    @IBOutlet weak var shotDistanceMarker: UIView!
+    @IBOutlet weak var halfFieldCircle: UIView!
+    @IBOutlet weak var penaltyMarkCircle: UIView!
+    @IBOutlet weak var goalBox: UIView!
+    @IBOutlet weak var sixYardBox: UIView!
+    @IBOutlet weak var cornerPoint: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.shotDistanceMarker.layer.cornerRadius = self.shotDistanceMarker.frame.size.height / 2
+        self.halfFieldCircle.layer.cornerRadius = self.halfFieldCircle.frame.size.height / 2
+        self.penaltyMarkCircle.layer.cornerRadius = self.penaltyMarkCircle.frame.size.height / 2
+        
+        
+        self.halfFieldCircle.clipsToBounds = true
+        self.penaltyMarkCircle.clipsToBounds = true
+        self.shotDistanceMarker.clipsToBounds = true
+        
+
+        print("corner point center is \(cornerPoint.center)")
+
+        
     }
+    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let firstTouch = touches.first {
             let hitView = self.view.hitTest(firstTouch.location(in: self.view), with: event)
-            let shotDistanceLocation = firstTouch.location(in: shotDistance)
-            if hitView === shotDistance {
+            shotDistanceLocation = firstTouch.location(in: shotDistance)
+            if hitView === shotDistance || hitView == halfFieldCircle || hitView == penaltyMarkCircle || hitView == goalBox || hitView == sixYardBox  {
                 tapped = true
                 self.edgesForExtendedLayout = []
-                let shotDistancePoint = CGPoint(x: shotDistanceLocation.x + 25 , y: shotDistanceLocation.y + 190 )
-                print("shotDistance point is \(shotDistancePoint)")
-                shotDistanceMarker.center = shotDistancePoint
+                let shotDistancePoint = CGPoint(x: shotDistanceLocation.x + shotDistance.bounds.size.width / 2, y: shotDistanceLocation.y + shotDistance.bounds.size.height / 2 )
+                let shotDistancePointConvertedLocation = shotDistance.convert(shotDistancePoint, to: self.view)
+                
+                
+                //var buttonCenter = CGPoint(x: button.bounds.origin.x + button.bounds.size.width / 2, y: button.bounds.origin.y + button.bounds.size.height / 2)
+                //var p = button.convertPoint(buttonCenter, to: self.view)
+                
+                
+                shotDistanceMarker.center = shotDistancePointConvertedLocation
+                print("tap is inside")
             }
         } else {
             print("touch is outside")
         }
     }
 
-    @IBAction func continueButtonTapped(_ sender: UIButton) {
-        if(tapped) {
-            let distanceOfShot = DistanceShot()
-            distanceOfShot.distance = shotDistanceMarker.center
-            print("distance of shot = \(distanceOfShot.distance)")
-            // 1
-       //     let distanceViewController = segue.destination as! DistanceViewController
-            // 2
-        //    DistanceViewController.distanceOfShot.append(distanceOfShot)
-            
-            print("CGPoint is: \(shotDistanceMarker.center)")
-           // let distance = shotDistanceMarker.center
-            
 
+    @IBAction func continueButtonTapped(_ sender: UIButton) {
+        continueButton.setTitle("Tap on the field, then press continue" , for: .normal)
+        if(tapped) {
+            print("location tapped is \(shotDistanceLocation)")
+            print("center of view is \(shotDistanceMarker.center)")
+            distanceOfShots.distancePoint = shotDistanceMarker.center
+            let currentUser = User.current
+            //print("user uid is \(currentUser.uid) and done")
+            xInts.append(Double(distanceOfShots.distancePoint.x))
+            var randomDictionary = ["Shot": xInts]
+            let ref = Database.database().reference().child("utees").child(currentUser.uid)
+            ref.setValue(randomDictionary)
             self.performSegue(withIdentifier: "distanceToShotLocationVC", sender: self)
- 
-         } else {
+        } else {
             print("Not yet Tapped")
         }
     }
