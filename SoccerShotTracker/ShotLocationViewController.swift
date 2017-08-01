@@ -10,17 +10,23 @@ import UIKit
 
 class ShotLocationViewController: UIViewController {
     var tapped = false
-    var landedShots = [Shot]()
+    var landedShots = Shot()
+    var shotLandedLocation = CGPoint()
     
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var shotLocation: UIView!
-    @IBOutlet weak var shotLocationMarker: UIImageView!
+    @IBOutlet weak var shotLocationMarker: UIView!
+    @IBOutlet weak var goalPostBox: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        goalPostBox.layer.borderWidth = 10
+        goalPostBox.layer.borderColor = UIColor.black.cgColor
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        self.shotLocationMarker.layer.cornerRadius = self.shotLocationMarker.frame.size.height / 2
+        self.shotLocationMarker.clipsToBounds = true
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -30,14 +36,20 @@ class ShotLocationViewController: UIViewController {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let firstTouch = touches.first {
             let hitView = self.view.hitTest(firstTouch.location(in: self.view), with: event)
-            let shotLandedLocation = firstTouch.location(in: shotLocation)
-            if hitView === shotLocation {
+            shotLandedLocation = firstTouch.location(in: shotLocation)
+            if hitView === shotLocation || hitView === goalPostBox  {
                 tapped = true
-                print("Tap is inside")
+                print("start")
+                print("Shot Landed location is \(shotLandedLocation)")
                 self.edgesForExtendedLayout = []
-                let shotLocationPoint = CGPoint(x: shotLandedLocation.x + 45,y: shotLandedLocation.y + 170)
-                shotLocationMarker.center = shotLocationPoint
-                print(shotLocationMarker.center)
+                ////let shotLocationPoint = CGPoint(x: shotLandedLocation.x + shotLocation.bounds.origin.x ,y: shotLandedLocation.y + shotLocation.bounds.origin.y / 2)
+                //let shotLocationPoint = CGPoint(x: shotLandedLocation.x,y: shotLandedLocation.y)
+                ////let shotLocationPointConvertedToLocation = shotLocation.convert(shotLocationPoint, to: self.view)
+                    shotLocationMarker.center = shotLandedLocation
+                    ///print("shot location point is \(shotLocationPoint)")
+                    ///print("shot location point conver to location is \(shotLocationPointConvertedToLocation)")
+                    print("shot location marker center \(shotLocationMarker.center)")
+                    print("end")
             } else {
                 print("Tap is outside")
             }
@@ -53,22 +65,20 @@ class ShotLocationViewController: UIViewController {
                 for indexB in arrayForY {
                     let referenceCGPoint = CGPoint(x: (CGFloat(Double(shotLocation.frame.size.width) * indexA)) , y: CGFloat(Double(shotLocation.frame.size.height) * indexB))
                     let distance = hypotf(Float(referenceCGPoint.x - shotLocation.center.x), Float(referenceCGPoint.y - shotLocation.center.y))
-                    print("this is the distance from tapped to references \(distance)")
+                    
+                    
+                    
+//                    print("this is the distance from tapped to references \(distance)")
                     if(distance < shortestDistance ){
                         let closestReferenceCGPoint = referenceCGPoint
                         shortestDistance = distance
-                        print("closest ReferenceCGpoint is \(closestReferenceCGPoint)")
+//                        print("closest ReferenceCGpoint is \(closestReferenceCGPoint)")
                     }
                 }
             }
-            print(shortestDistance)
+//            print(shortestDistance)
             
             //let currentUser = User.current
-            
-    
-            
-            
-            
             self.performSegue(withIdentifier: "shotLocationVCToTab", sender: self)
         } else {
             continueButton.setTitle("Tap in the Goal Box First", for: .normal)

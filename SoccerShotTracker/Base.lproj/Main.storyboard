@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -183,42 +182,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Y2x-9f-2bl">
-                                <rect key="frame" x="16" y="98" width="343" height="316.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="2wE-YZ-Ao3">
+                                <rect key="frame" x="17.25" y="44" width="340.5" height="350.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shot Landed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HO-yB-5bp">
-                                        <rect key="frame" x="72" y="0.0" width="199" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Shot Landed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HO-yB-5bp">
+                                        <rect key="frame" x="121.5" y="0.0" width="97.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.99991267919540405" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="fY0-eW-ndN">
-                                        <rect key="frame" x="0.0" y="70.5" width="343" height="246"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qZt-HM-MKY">
+                                        <rect key="frame" x="0.0" y="100.5" width="340.5" height="250"/>
                                         <subviews>
-                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangleSoccerGoalPost.png" translatesAutoresizingMaskIntoConstraints="NO" id="NKa-Vc-zDP">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="246"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="246" id="CI2-w6-DRy"/>
-                                                    <constraint firstAttribute="width" constant="343" id="YNb-6Y-v9v"/>
-                                                    <constraint firstAttribute="width" secondItem="NKa-Vc-zDP" secondAttribute="height" multiplier="343:246" id="hVJ-zv-99E"/>
-                                                </constraints>
-                                            </imageView>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RQD-V5-dFa">
+                                                <rect key="frame" x="67.75" y="61.5" width="204.5" height="187.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GPf-vE-9lU">
+                                                <rect key="frame" x="159.75" y="114.5" width="20" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
                                         </subviews>
-                                    </stackView>
+                                        <color key="backgroundColor" red="0.72783207890000001" green="0.15987607679999999" blue="0.087506408780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="340" id="0TQ-Ie-dkX"/>
+                                            <constraint firstAttribute="height" constant="250" id="MlO-pl-yWc"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="7HO-yB-5bp" firstAttribute="leading" secondItem="Y2x-9f-2bl" secondAttribute="leading" constant="72" id="19n-KT-pZV"/>
-                                </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="football.png" translatesAutoresizingMaskIntoConstraints="NO" id="StC-NN-tR6">
-                                <rect key="frame" x="177" y="323" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="LgR-Qh-1wD"/>
-                                    <constraint firstAttribute="height" constant="20" id="oeh-tt-KpV"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVJ-18-gMu">
-                                <rect key="frame" x="0.0" y="468" width="375" height="151"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVJ-18-gMu">
+                                <rect key="frame" x="0.0" y="576" width="375" height="42"/>
                                 <color key="backgroundColor" red="0.63758832216262817" green="0.96904879808425903" blue="0.64351934194564819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="25"/>
                                 <state key="normal" title="Continue">
@@ -231,21 +228,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.31700095534324646" green="0.68501853942871094" blue="0.16826841235160828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="StC-NN-tR6" firstAttribute="centerY" secondItem="Fv9-kC-eCL" secondAttribute="centerY" id="12Y-fo-MfJ"/>
-                            <constraint firstItem="StC-NN-tR6" firstAttribute="centerX" secondItem="Fv9-kC-eCL" secondAttribute="centerX" id="4SL-Xf-MSq"/>
-                            <constraint firstItem="JVJ-18-gMu" firstAttribute="top" secondItem="Y2x-9f-2bl" secondAttribute="bottom" constant="53" id="8X6-Rk-HdP"/>
                             <constraint firstItem="jih-9t-UHb" firstAttribute="top" secondItem="JVJ-18-gMu" secondAttribute="bottom" id="Mhh-IR-uPl"/>
                             <constraint firstAttribute="trailing" secondItem="JVJ-18-gMu" secondAttribute="trailing" id="VR5-2J-sJG"/>
                             <constraint firstItem="JVJ-18-gMu" firstAttribute="leading" secondItem="Fv9-kC-eCL" secondAttribute="leading" id="aEQ-Ui-bS4"/>
-                            <constraint firstItem="JVJ-18-gMu" firstAttribute="leading" secondItem="Y2x-9f-2bl" secondAttribute="trailing" constant="-358.5" id="aIp-cA-f7c"/>
-                            <constraint firstItem="Y2x-9f-2bl" firstAttribute="centerX" secondItem="StC-NN-tR6" secondAttribute="centerX" id="bZF-0S-g3F"/>
-                            <constraint firstItem="Y2x-9f-2bl" firstAttribute="top" secondItem="mNk-b8-cpn" secondAttribute="bottom" constant="78" id="eWg-59-CWj"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="continueButton" destination="JVJ-18-gMu" id="uX0-xq-4ol"/>
-                        <outlet property="shotLocation" destination="NKa-Vc-zDP" id="MkP-pf-3QY"/>
-                        <outlet property="shotLocationMarker" destination="StC-NN-tR6" id="yhS-Ux-Ndy"/>
+                        <outlet property="goalPostBox" destination="RQD-V5-dFa" id="FUl-v6-1CJ"/>
+                        <outlet property="shotLocation" destination="qZt-HM-MKY" id="0Vd-cs-1se"/>
+                        <outlet property="shotLocationMarker" destination="GPf-vE-9lU" id="eCU-80-0Tz"/>
                         <segue destination="QRi-Pu-C8H" kind="show" identifier="shotLocationVCToTab" id="i1f-u5-6iy"/>
                     </connections>
                 </viewController>
@@ -273,7 +265,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="football.png" width="64" height="64"/>
         <image name="rectangleSoccerGoalPost.png" width="345" height="250"/>
     </resources>
 </document>
