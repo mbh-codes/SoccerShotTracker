@@ -10,7 +10,6 @@ import UIKit
 
 import FirebaseDatabase
 
-
 class DistanceViewController: UIViewController {
     var tapped = false
     var distanceOfShots = Shot()
@@ -70,8 +69,6 @@ class DistanceViewController: UIViewController {
     @IBAction func continueButtonTapped(_ sender: UIButton) {
         continueButton.setTitle("Tap on the field, then press continue" , for: .normal)
         if(tapped) {
-         //   print("location tapped is \(shotDistanceLocation)")
-         //   print("center of view is \(shotDistanceMarker.center)")
             distanceOfShots.distancePoint = shotDistanceMarker.center
             let currentUser = User.current
             //print("user uid is \(currentUser.uid) and done")
