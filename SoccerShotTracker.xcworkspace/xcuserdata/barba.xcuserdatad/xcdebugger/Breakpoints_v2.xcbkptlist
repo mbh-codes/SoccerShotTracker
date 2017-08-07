@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SoccerShotTracker/AppDelegate.swift"
+            timestampString = "523561082.989778"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "configureInitialRootViewController(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SoccerShotTracker.AppDelegate.configureInitialRootViewController (for : Swift.Optional&lt;__ObjC.UIWindow&gt;) -&gt; ()"
+                  moduleName = "SoccerShotTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/barba/Desktop/Make%20School%20Summer%202017/SoccerShotTracker/SoccerShotTracker/AppDelegate.swift"
+                  timestampString = "523822948.568681"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "300">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SoccerShotTracker.AppDelegate.configureInitialRootViewController (for : Swift.Optional&lt;__ObjC.UIWindow&gt;) -&gt; ()"
+                  moduleName = "SoccerShotTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/barba/Desktop/Make%20School%20Summer%202017/SoccerShotTracker/SoccerShotTracker/AppDelegate.swift"
+                  timestampString = "523822948.571188"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "848">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

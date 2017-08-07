@@ -7,12 +7,10 @@
 //
 
 import UIKit
-
 import FirebaseDatabase
 
 class DistanceViewController: UIViewController {
     var tapped = false
-    var distanceOfShots = Shot()
     var xInts = [Double]()
     var shotDistanceLocation = CGPoint()
     
@@ -27,6 +25,15 @@ class DistanceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+   //     self.shotDistance.layer.borderColor = UIColor.black as! CGColor
+        self.shotDistance.layer.borderWidth = 2
+        self.shotDistance.layer.borderColor = UIColor.white.cgColor
+        self.halfFieldCircle.layer.borderColor = UIColor.white.cgColor
+        self.halfFieldCircle.layer.borderWidth = 2
+        self.goalBox.layer.borderColor = UIColor.white.cgColor
+        self.goalBox.layer.borderWidth = 2
+        self.sixYardBox.layer.borderColor = UIColor.white.cgColor
+        self.sixYardBox.layer.borderWidth = 2
         self.shotDistanceMarker.layer.cornerRadius = self.shotDistanceMarker.frame.size.height / 2
         self.halfFieldCircle.layer.cornerRadius = self.halfFieldCircle.frame.size.height / 2
         self.penaltyMarkCircle.layer.cornerRadius = self.penaltyMarkCircle.frame.size.height / 2
@@ -46,7 +53,7 @@ class DistanceViewController: UIViewController {
         if let firstTouch = touches.first {
             let hitView = self.view.hitTest(firstTouch.location(in: self.view), with: event)
             shotDistanceLocation = firstTouch.location(in: shotDistance)
-            if hitView === shotDistance || hitView == halfFieldCircle || hitView == penaltyMarkCircle || hitView == goalBox || hitView == sixYardBox  {
+            if hitView === shotDistance || hitView === halfFieldCircle || hitView === penaltyMarkCircle || hitView === goalBox || hitView === sixYardBox  {
                 tapped = true
                 self.edgesForExtendedLayout = []
                 let shotDistancePoint = CGPoint(x: shotDistanceLocation.x + shotDistance.bounds.origin.x, y: shotDistanceLocation.y + shotDistance.bounds.origin.y / 2 )
@@ -69,10 +76,9 @@ class DistanceViewController: UIViewController {
     @IBAction func continueButtonTapped(_ sender: UIButton) {
         continueButton.setTitle("Tap on the field, then press continue" , for: .normal)
         if(tapped) {
-            distanceOfShots.distancePoint = shotDistanceMarker.center
+            //distanceOfShots.distancePoint = shotDistanceMarker.center
             let currentUser = User.current
-            //print("user uid is \(currentUser.uid) and done")
-            xInts.append(Double(distanceOfShots.distancePoint.x))
+            //xInts.append(Double(distanceOfShots.distancePoint.x))
             let randomDictionary = ["Shot": xInts]
             let ref = Database.database().reference().child("utees").child(currentUser.uid)
             ref.setValue(randomDictionary)

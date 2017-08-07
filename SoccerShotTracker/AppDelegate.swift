@@ -56,14 +56,14 @@ extension AppDelegate {
         let initialViewController: UIViewController
         
         if Auth.auth().currentUser != nil,
-            let userData = defaults.object(forKey: Constants.UserDefualts.currentUser) as? Data ,
+            let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
             let user = NSKeyedUnarchiver.unarchiveObject(with: userData) as? User {
                 User.setCurrent(user)
-               // initialViewController = UIStoryboard.initialViewController(for: .main)
+                initialViewController = UIStoryboard.initialViewController(for: .main)
             } else {
-                //initialViewController = UIStoryboard.initialViewController(for: .login)
+                initialViewController = UIStoryboard.initialViewController(for: .login)
             }
-   //         window?.rootViewController = initialViewController
+            window?.rootViewController = initialViewController
             window?.makeKeyAndVisible()
     }
 }

@@ -9,9 +9,42 @@
 import UIKit
 import FirebaseDatabase.FIRDataSnapshot
 
-class Shot {
-    var distancePoint = CGPoint()
-    var landedPoint = CGPoint()
+class Post {
+    let poster: User
+    var distancePoint: String
+    var key: String?
+    var landedQuadrant: String
+    let creationDate: Date
+    var dictValue: [String: Any] {
+        let createdAgo = creationDate.timeIntervalSince1970
+        let userDict = ["uid" : poster.uid, "username" : poster.username]
+        return["distance_quadrant" : distancePoint, "landed_quadrant" : landedQuadrant, "created_at": createdAgo, "poster" : userDict]
+    }
+    init?(snapshot: DataSnapshot) {
+        guard let dict = snapshot.value as? [String: Any],
+            let createdAgo = dict["created_at"] as? TimeInterval,
+            let distancePoint = dict["distance_quadrant"] as? String,
+            let landedQuadrant = dict["landed_quadrant"] as? String,
+            let userDict = dict["poster"] as? [String : Any],
+            let uid = userDict["uid"] as? String,
+            let username = userDict["username"] as? String
+            else { return nil }
+        
+        self.key = snapshot.key
+        self.landedQuadrant = landedQuadrant
+        self.distancePoint = distancePoint
+        self.creationDate = Date(timeIntervalSince1970: createdAgo)
+        self.poster = User(uid: uid, username: username)
+    }
+    init(distancePoint: String, landedQuadrant: String){
+        self.distancePoint = distancePoint
+        self.landedQuadrant = landedQuadrant
+        self.creationDate = Date()
+        self.poster = User.current
+    }
+//    convenience init() {
+//        self.init(snapshot : DataSnapshot)
+//    }
 }
 //    init?(snapshot: DataSnapshot) {
 //        guard let dict = snapshot.value as? [String: Any],
