@@ -13,13 +13,9 @@ import FirebaseDatabase
 
 typealias FIRUser = FirebaseAuth.User
 
-
 class LoginViewController: UIViewController {
     
-    
     @IBOutlet weak var loginButton: UIButton!
-    
-
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         guard let authUI = FUIAuth.defaultAuthUI()
@@ -28,10 +24,8 @@ class LoginViewController: UIViewController {
         let authViewController = authUI.authViewController()
         present(authViewController, animated: true)
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
     
@@ -40,8 +34,6 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
-
-
     /*
     // MARK: - Navigation
 
@@ -61,12 +53,10 @@ extension LoginViewController: FUIAuthDelegate {
         UserService.show(forUID: user.uid) { (user) in
             if let user = user {
                 User.setCurrent(user, writeToUserDefaults: true)
-                
-                
                 let initialViewController = UIStoryboard.initialViewController(for: .main)
                     self.view.window?.rootViewController = initialViewController
                     self.view.window?.makeKeyAndVisible()
-                } else {
+            } else {
                 self.performSegue(withIdentifier: Constants.segue.toCreateUsername, sender: self)
             }
         }

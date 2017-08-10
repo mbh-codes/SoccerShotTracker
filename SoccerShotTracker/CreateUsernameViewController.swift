@@ -10,27 +10,19 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-
-
-
 class CreateUsernameViewController: UIViewController {
     
-    
-
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         guard let firUser = Auth.auth().currentUser,
             let username = usernameTextField.text,
@@ -39,16 +31,15 @@ class CreateUsernameViewController: UIViewController {
         }
         UserService.create(firUser, username: username) { (user) in
             guard let user = user else {
-                return
+            return
             }
-            User.setCurrent(user)
-                let storyboard = UIStoryboard(name: "Main", bundle: .main)
-                if let initialViewController = storyboard.instantiateInitialViewController() {
-                    self.view.window?.rootViewController = initialViewController
-                    self.view.window?.makeKeyAndVisible()
-        
-                }
+        User.setCurrent(user)
+            let storyboard = UIStoryboard(name: "Main", bundle: .main)
+            if let initialViewController = storyboard.instantiateInitialViewController() {
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
             }
+        }
     }
 }
 

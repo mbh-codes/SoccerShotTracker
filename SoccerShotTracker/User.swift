@@ -75,7 +75,6 @@ class User: NSObject {
     //Mark: - Properties
     let uid: String
     let username: String
-    
     //mark: - Init
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
@@ -101,8 +100,10 @@ class User: NSObject {
     static var _current: User?
     static var current: User {
         guard let currentUser = _current else {
-            print("is reaching to this pointsC")
-            fatalError("Error: current user doesn't exist")
+    
+            assertionFailure("NotWorking")
+            return self.current
+            //above code is iffy
         }
         return currentUser
     }

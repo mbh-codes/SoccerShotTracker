@@ -25,6 +25,6 @@ extension UIStoryboard {
         guard let initialViewController = storyboard.instantiateInitialViewController() else {
             fatalError("Couldn't instantiate initial view controller for \(type.filename) storyboard")
         }
-        return initialViewController
+            return initialViewController
     }
 }
