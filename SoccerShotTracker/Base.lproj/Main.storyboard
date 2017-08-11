@@ -49,7 +49,6 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="gP4-Kh-pKh" firstAttribute="top" secondItem="ghQ-rF-KcJ" secondAttribute="bottom" id="Wql-iX-vuJ"/>
                                     <constraint firstAttribute="trailing" secondItem="gP4-Kh-pKh" secondAttribute="trailing" id="aU3-5X-29U"/>
                                     <constraint firstItem="gP4-Kh-pKh" firstAttribute="leading" secondItem="3wg-10-bbf" secondAttribute="leading" id="bKJ-df-xUw"/>
                                 </constraints>

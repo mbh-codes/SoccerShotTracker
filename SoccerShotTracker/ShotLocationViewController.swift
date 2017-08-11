@@ -56,7 +56,7 @@ class ShotLocationViewController: UIViewController {
                     self.shotLocation.addSubview(DynamicView)
                     arrayOfViews.append(DynamicView)
                 }
-                    amountOfViewsCreated = amountOfViewsCreated + 1
+                    amountOfViewsCreated += 1
             }
         }
     }
@@ -83,7 +83,7 @@ class ShotLocationViewController: UIViewController {
     
     @IBAction func continueButtonSelected(_ sender: UIButton){
         if(tapped){
-            let shotQuadrant = String(tappedViewQuadrant)
+            let shotQuadrant = tappedViewQuadrant
             let currentUser = User.current
             let dictionaryOfViewTags = ["shotsLandedQuadrants": shotQuadrant]
             let ref = Database.database().reference().child("posts").child(currentUser.uid).childByAutoId()
